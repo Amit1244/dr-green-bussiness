@@ -34,8 +34,8 @@ export default async function ShopStrains(props) {
 
     return (
         <ShopStrainsClient
-            strains={strains.data.strains}
-            totalStrains={strains.data.pageMetaDto.itemCount}
+            // strains={strains.data.strains}
+            // totalStrains={strains.data.pageMetaDto.itemCount}
             countryCode={countryCode}
             takeStrains={"4"}
             status={props.status}

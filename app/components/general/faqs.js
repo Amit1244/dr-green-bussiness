@@ -2,6 +2,8 @@ import Accordion from "../accordion/accordion";
 import GetContent from "@/lib/wp/get-content";
 
 export default async function FAQs() {
+    console.log('process.env.PAGE_ID :>> ', process.env.PAGE_ID);
+
     const query = `
 {
     pageBy(pageId: ${process.env.PAGE_ID}) {
