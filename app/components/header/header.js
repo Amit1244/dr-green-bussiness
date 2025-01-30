@@ -70,7 +70,7 @@ export default async function Header() {
     }
 }
     `;
-    const pageContent = (await GetContent(query)).pageBy.pageContent;
+    const pageContent = (await GetContent(query))?.pageBy?.pageContent;
 
     return (
         <header className="top-0 left-0 w-full z-[1000] bg-gradient-to-t from-white/80 to-primary/60">
@@ -105,7 +105,7 @@ export default async function Header() {
                             className="max-w-[30px] sm:max-w-full h-auto"
                         /> */}
                         <Image
-                            src={pageContent.menuIcon.node.sourceUrl}
+                            src={pageContent?.menuIcon?.node?.sourceUrl}
                             alt="Planet Icon"
                             width={50}
                             height={50}
@@ -115,13 +115,13 @@ export default async function Header() {
                             className="max-w-[30px] sm:max-w-full h-auto"
                         />
                         <p className="text-2xl sm:text-4xl leading-none secondary-font hidden sm:block">
-                            {pageContent.menuIconText}
+                            {pageContent?.menuIconText}
                         </p>
                     </div>
                     <div className="flex justify-center items-center">
                         <Link href="/">
                             <Image
-                                src={pageContent.menuLogo.node.sourceUrl}
+                                src={pageContent?.menuLogo?.node?.sourceUrl}
                                 alt="Website Logo"
                                 width={60}
                                 height={60}

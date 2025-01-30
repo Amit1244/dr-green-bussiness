@@ -31,7 +31,7 @@ export async function generateMetadata() {
         title: "Dr. Green: " + pageBy.title,
         description: "Your trusted source for medical cannabis.",
         openGraph: {
-            images: [pageBy.pageContent.heroCelebrityPhoto.node.sourceUrl],
+            images: [pageBy?.pageContent?.heroCelebrityPhoto?.node?.sourceUrl],
         },
     };
 }
@@ -281,22 +281,22 @@ export default async function Home() {
                 </div>
             </section> */}
 
-            {
+            {/* {
                 availableLocations && locationData && availableLocations?.[0]?.toLowerCase()?.replace(/\s+/g, "") !== locationData?.country?.toLowerCase().replace(/\s+/g, "") && (
-                    <>
-                        <section id="shop-by-strain" className="py-32 mx-auto max-w-5xl">
-                            <div className="container mx-auto px-4">
-                                <h2 className="text-3xl md:text-5xl pb-10 text-center">Shop by strain</h2>
-                                <ShopStrains status="1" />
-                            </div>
-                        </section>
-                    </>
+                    <> */}
+            <section id="shop-by-strain" className="py-32 mx-auto max-w-5xl">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-[50px] md:text-5xl font-semibold pb-10 font-figtree ">Shop by strain</h2>
+                    <ShopStrains status="1" />
+                </div>
+            </section>
+            {/* </>
                 )
-            }
+            } */}
             <div>
                 {/* Top Section */}
                 <section className="text-center py-12 px-6">
-                    <p className="text-primary font-semibold uppercase tracking-wide mb-4">
+                    <p className="text-primary font-semibold font-figtree uppercase tracking-wide mb-4">
                         Lorem Ipsum Dolor
                     </p>
                     {/* <TextHightlight
@@ -311,7 +311,7 @@ export default async function Home() {
                         }
                         class="home-text"
                     /> */}
-                    <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-6">
+                    <h2 className="text-2xl md:text-4xl font-semibold text-[#2B2B2B] mb-6">
                         Lorem ipsum dolor sit amet, consectetur elit, sed diam <br /> nonummy dolore
                         volutpat.
                     </h2>
@@ -442,12 +442,18 @@ export default async function Home() {
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium text-gray-800 mb-4">
                             Made Possible by <br /> DR. Green
                         </h2>
-                        <p className="text-[#2b2b2b] mb-6">
+                        <p
+                            className="text-[24px] font-light max-w-[750px] mb-8 text-start"
+                            dangerouslySetInnerHTML={{
+                                __html: content.pageContent.madePossibleParagraphText,
+                            }}
+                        />
+                        {/* <p className="text-[#2b2b2b] mb-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
                             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
                             cannabis strains. Lorem ipsum dolor sit amet, consectetur euismod
                             tincidunt ut laoreet dolore aliquam erat volutpat.
-                        </p>
+                        </p> */}
                         <a href="https://drgreennft.com/">
                             <button className="bg-[#2b2b2b] text-white py-3 px-6 rounded-full hover:bg-[#2b2b2b]/90">
                                 Learn More
@@ -471,7 +477,7 @@ export default async function Home() {
                 <div className="container mx-auto xl:px-44 px-4">
                     <div>
                         <div className="text-start mb-20">
-                            <h2 className="text-5xl sm:leading-tight font-medium ">
+                            <h2 className="text-5xl sm:leading-tight font-[600] ">
                                 Questions?
                             </h2>
                             <p className="text-[30px] text-primary font-light">

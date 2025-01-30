@@ -79,7 +79,7 @@ export default function CartAccount(props) {
                             strokeLinejoin="round"
                         />
                     </svg>
-                    <span className="hidden md:inline">Dashboard</span>
+                    <span className="hidden md:inline font-manrope">Dashboard</span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -97,14 +97,14 @@ export default function CartAccount(props) {
                     </svg>
                     <div
                         onMouseOver={() => MenuHandler(true)}
-                        className={`pt-2 absolute top-full right-0 min-w-full ease-in-out duration-300 ${menuOpen
+                        className={`pt-2 absolute top-full right-0 font-manrope min-w-full ease-in-out duration-300 ${menuOpen
                             ? "opacity-100 z-20 pointer-events-auto"
                             : "opacity-0 pointer-events-none"
                             }`}
                     >
                         <div
                             onMouseOver={() => MenuHandler(true)}
-                            className={`justify-end text-end flex flex-col items-end gap-2 p-4 rounded-[10px] border  border-[#808080] backdrop-blur-[44px] cursor-auto whitespace-nowrap`}
+                            className={`justify-end text-end flex font-manrope flex-col items-end gap-2 p-4 rounded-[10px] border  border-[#808080] backdrop-blur-[44px] cursor-auto whitespace-nowrap`}
                         >
                             <Link href="/dashboard" className="block md:hidden">
                                 Dashboard
@@ -140,7 +140,7 @@ export default function CartAccount(props) {
                                 Eligibility
                             </Link>
                             <button
-                                className="font-normal whitespace-nowrap"
+                                className=" whitespace-nowrap font-manrope"
                                 title="Log Out"
                                 onClick={signOut}
                             >
@@ -182,7 +182,7 @@ export default function CartAccount(props) {
                             />
                         </svg>
                     </div>
-                    <span className="font-semibold">Login </span>
+                    <span className="font-semibold font-manrope">Login </span>
                     <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5 1L7.5 7L13.5 1" stroke="#2B2B2B" strokeWidth="2" strokeLinejoin="round" />
                     </svg>

@@ -11,7 +11,7 @@ export default async function ShopStrains(props) {
     const body = {
         orderBy: "desc",
         countryCode: countryCode,
-        take: "9",
+        take: "4",
         order: "popularity",
     };
     const params = new URLSearchParams(body).toString();
@@ -37,7 +37,7 @@ export default async function ShopStrains(props) {
             strains={strains.data.strains}
             totalStrains={strains.data.pageMetaDto.itemCount}
             countryCode={countryCode}
-            takeStrains={"9"}
+            takeStrains={"4"}
             status={props.status}
         />
     );

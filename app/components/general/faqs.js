@@ -16,9 +16,8 @@ export default async function FAQs() {
     `;
 
     const faqs = (await GetContent(query)).pageBy.pageContent.faqsRepeater;
-
     return (
-        <div className=" mx-auto">
+        <div className="xl:w-2/3 mx-auto">
             <Accordion items={faqs} />
         </div>
     );

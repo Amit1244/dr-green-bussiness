@@ -13,6 +13,7 @@ module.exports = {
             fontFamily: {
                 montserrat: ["var(--font-montserrat)"],
                 figtree: ['Figtree', 'serif'],
+                manrope: ['Manrope', 'sans-serif'],
             },
             keyframes: {
                 wiggle: {
